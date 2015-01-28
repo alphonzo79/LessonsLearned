@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_to_complete"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/time_label"
+        android:layout_toRightOf="@id/time_label" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/time_label"
+        android:fillViewport="true"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="@string/label_100_rows" />
+
+            <Button
+                android:id="@+id/raw_100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sql_with_raw"/>
+
+            <Button
+                android:id="@+id/cv_100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/sql_with_cv"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="@string/label_1000_rows" />
+
+            <Button
+                android:id="@+id/raw_1000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sql_with_raw"/>
+
+            <Button
+                android:id="@+id/cv_1000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/sql_with_cv"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="@string/label_10000_rows" />
+
+            <Button
+                android:id="@+id/raw_10000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sql_with_raw"/>
+
+            <Button
+                android:id="@+id/cv_10000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/sql_with_cv"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="@string/label_100000_rows" />
+
+            <Button
+                android:id="@+id/raw_100000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sql_with_raw"/>
+
+            <Button
+                android:id="@+id/cv_100000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/sql_with_cv"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="@string/label_1000000_rows" />
+
+            <Button
+                android:id="@+id/raw_1000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sql_with_raw"/>
+
+            <Button
+                android:id="@+id/cv_1000000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/sql_with_cv"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

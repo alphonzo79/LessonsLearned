@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LessonsLearnedExamples</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_100_rows">Inserting 100 Rows</string>
+    <string name="label_1000_rows">Inserting 1,000 Rows</string>
+    <string name="label_10000_rows">Inserting 10,000 Rows</string>
+    <string name="label_100000_rows">Inserting 100,000 Rows</string>
+    <string name="label_1000000_rows">Inserting 1,000,000 Rows</string>
+    <string name="sql_with_cv">With Content Variables</string>
+    <string name="sql_with_raw">With Compiled Statements</string>
+    <string name="sql_clear">Clean Up After Yourself</string>
+    <string name="time_to_complete">Time to complete:</string>
+    <string name="working">Working, dude, hang on</string>
+
+</resources>
