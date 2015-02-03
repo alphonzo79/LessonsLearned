@@ -17,6 +17,8 @@ public class SqlPerformanceDao extends CoreDbHelper {
     private final String COLUMN_TWO = "val_two";
     private final String COLUMN_THREE = "val_three";
     private final String COLUMN_FOUR = "val_four";
+    private final String COLUMN_FIVE = "val_five";
+    private final String COLUMN_SIX = "val_six";
 
 
     public SqlPerformanceDao(Context context) {
@@ -26,7 +28,7 @@ public class SqlPerformanceDao extends CoreDbHelper {
     public void addTestDataWithSqlStatement(int numToAdd) {
         SQLiteDatabase db = getWritableDatabase();
 
-        SQLiteStatement stmt = db.compileStatement(String.format(Locale.US, "INSERT INTO %s (%s, %s, %s, %s) VALUES (?, ?, ?, ?);", TABLE_NAME, COLUMN_ONE, COLUMN_TWO, COLUMN_THREE, COLUMN_FOUR));
+        SQLiteStatement stmt = db.compileStatement(String.format(Locale.US, "INSERT INTO %s (%s, %s, %s, %s, %s, %s) VALUES (?, ?, ?, ?, ?, ?);", TABLE_NAME, COLUMN_ONE, COLUMN_TWO, COLUMN_THREE, COLUMN_FOUR, COLUMN_FIVE, COLUMN_SIX));
         db.beginTransaction();
         try {
             for(int i = 0; i < numToAdd; i++) {
@@ -34,6 +36,8 @@ public class SqlPerformanceDao extends CoreDbHelper {
                 stmt.bindString(2, String.valueOf(i));
                 stmt.bindLong(3, i);
                 stmt.bindLong(4, i);
+                stmt.bindString(5, String.valueOf(i));
+                stmt.bindLong(6, i);
 
                 stmt.execute();
 
@@ -63,6 +67,8 @@ public class SqlPerformanceDao extends CoreDbHelper {
                 cv.put(COLUMN_TWO, String.valueOf(i));
                 cv.put(COLUMN_THREE, i);
                 cv.put(COLUMN_FOUR, i);
+                cv.put(COLUMN_FIVE, String.valueOf(i));
+                cv.put(COLUMN_SIX, i);
 
                 db.insertWithOnConflict(TABLE_NAME, null, cv, SQLiteDatabase.CONFLICT_IGNORE);
 
@@ -75,5 +81,21 @@ public class SqlPerformanceDao extends CoreDbHelper {
             db.endTransaction();
             db.close();
         }
+    }
+
+    public void clearTable() {
+        SQLiteDatabase db = getWritableDatabase();
+        db.beginTransaction();
+         try {
+             SQLiteStatement stmt = db.compileStatement(String.format(Locale.US, "DELETE FROM %s WHERE %s NOT NULL", TABLE_NAME, COLUMN_ID));
+             stmt.execute();
+             stmt.clearBindings();
+             stmt.close();
+             db.setTransactionSuccessful();
+         } catch(SQLiteException e) {
+             e.printStackTrace();
+         } finally {
+             db.endTransaction();
+         }
     }
 }

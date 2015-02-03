@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="sql_performance_test_table">CREATE TABLE IF NOT EXISTS perf_test (_id INTEGER PRIMARY KEY AUTOINCREMENT, val_one TEXT, val_two TEXT, val_three INTEGER, val_four INTEGER);</string>
+    <string name="sql_performance_test_table">CREATE TABLE IF NOT EXISTS perf_test (_id INTEGER PRIMARY KEY AUTOINCREMENT, val_one TEXT, val_two TEXT, val_three INTEGER, val_four INTEGER, val_five TEXT, val_six INTEGER);</string>
 </resources>

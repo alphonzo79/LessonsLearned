@@ -70,6 +70,7 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
     private void doInserts(int count, boolean withCv) {
         progress.show();
         elapsedTimeDisplay.setText("");
+        dao.clearTable();
         startTime = System.currentTimeMillis();
         new AsyncTask<Object, Void, Void>() {
             @Override
