@@ -15,5 +15,8 @@
     <string name="sql_clear">Clean Up After Yourself</string>
     <string name="time_to_complete">Time to complete:</string>
     <string name="working">Working, dude, hang on</string>
+    <string name="none"></string>
+    <string name="button_text">Button Text</string>
+    <string name="color_filter_button">Color Filter Example</string>
 
 </resources>
