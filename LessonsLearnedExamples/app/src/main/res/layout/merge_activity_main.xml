@@ -1,0 +1,23 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/sql_performance_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sql_performance_tests"/>
+
+    <Button
+        android:id="@+id/color_filter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/color_filter_button"/>
+
+    <Button
+        android:id="@+id/build_type_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/build_type_button"/>
+
+</merge>

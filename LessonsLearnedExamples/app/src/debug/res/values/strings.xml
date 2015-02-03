@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="debug_notification">You\'re on debug, dude!</string>
+</resources>

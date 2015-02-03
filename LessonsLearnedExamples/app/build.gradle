@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
-
     defaultConfig {
         applicationId "rowley.lessonslearnedexamples"
         minSdkVersion 14
@@ -15,6 +14,17 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix '.debug'
+        }
+    }
+    productFlavors {
+        flavorTwo {
+            applicationId 'rowley.lessonslearnedexamples.two'
+        }
+        flavorOne {
+            applicationId 'rowley.lessonslearnedexamples.one'
         }
     }
 }

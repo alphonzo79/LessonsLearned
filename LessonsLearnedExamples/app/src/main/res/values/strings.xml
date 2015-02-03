@@ -18,5 +18,7 @@
     <string name="none"></string>
     <string name="button_text">Button Text</string>
     <string name="color_filter_button">Color Filter Example</string>
+    <string name="ok">Ok</string>
+    <string name="build_type_button">What\'s my build type?</string>
 
 </resources>
