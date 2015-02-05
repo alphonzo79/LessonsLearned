@@ -20,5 +20,10 @@
     <string name="color_filter_button">Color Filter Example</string>
     <string name="ok">Ok</string>
     <string name="build_type_button">What\'s my build type?</string>
+    <string name="cursor_loader_button">Cursor Loader Example</string>
+    <string name="empty_list">Nothing here, Homie!</string>
+    <string name="name_label">Name:</string>
+    <string name="count_label">Count:</string>
+    <string name="position_label">Position:</string>
 
 </resources>

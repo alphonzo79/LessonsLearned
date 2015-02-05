@@ -19,6 +19,7 @@
 
         <activity android:name=".sql_performance.SqlPerformanceActivity" />
         <activity android:name=".color_filter.ColorFilterActivity" />
+        <activity android:name=".cursor_loader.CursorLoaderActivity" />
     </application>
 
 </manifest>

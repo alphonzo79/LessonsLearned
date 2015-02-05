@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import rowley.lessonslearnedexamples.color_filter.ColorFilterActivity;
+import rowley.lessonslearnedexamples.cursor_loader.CursorLoaderActivity;
 import rowley.lessonslearnedexamples.sql_performance.SqlPerformanceActivity;
 
 
@@ -34,6 +35,13 @@ public abstract class MainActivityParent extends Activity {
             @Override
             public void onClick(View v) {
                 showBuildType();
+            }
+        });
+
+        findViewById(R.id.cursor_loader_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivityParent.this, CursorLoaderActivity.class));
             }
         });
     }
