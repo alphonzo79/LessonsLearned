@@ -37,6 +37,9 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
             case R.id.raw_100:
                 doInserts(100, false, false);
                 break;
+            case R.id.raw_100_nt:
+                doInserts(100, false, true);
+                break;
             case R.id.cv_100:
                 doInserts(100, true, false);
                 break;
@@ -45,6 +48,9 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
                 break;
             case R.id.raw_1000:
                 doInserts(1000, false, false);
+                break;
+            case R.id.raw_1000_nt:
+                doInserts(1000, false, true);
                 break;
             case R.id.cv_1000:
                 doInserts(1000, true, false);
@@ -55,6 +61,9 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
             case R.id.raw_10000:
                 doInserts(10000, false, false);
                 break;
+            case R.id.raw_10000_nt:
+                doInserts(10000, false, true);
+                break;
             case R.id.cv_10000:
                 doInserts(10000, true, false);
                 break;
@@ -64,6 +73,9 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
             case R.id.raw_100000:
                 doInserts(100000, false, false);
                 break;
+            case R.id.raw_100000_nt:
+                doInserts(100000, false, true);
+                break;
             case R.id.cv_100000:
                 doInserts(100000, true, false);
                 break;
@@ -72,6 +84,9 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
                 break;
             case R.id.raw_1000000:
                 doInserts(1000000, false, false);
+                break;
+            case R.id.raw_1000000_nt:
+                doInserts(1000000, false, true);
                 break;
             case R.id.cv_1000000:
                 doInserts(1000000, true, false);
@@ -97,7 +112,11 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
                         dao.addTestDataWithContentValues((Integer) params[0]);
                     }
                 } else {
-                    dao.addTestDataWithSqlStatement((Integer)params[0]);
+                    if((Boolean)params[2]) {
+                        dao.addTestDataWithSqlStatementNoTransaction((Integer) params[0]);
+                    } else {
+                        dao.addTestDataWithSqlStatement((Integer) params[0]);
+                    }
                 }
                 return null;
             }

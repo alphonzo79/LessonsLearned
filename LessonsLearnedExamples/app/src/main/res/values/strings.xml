@@ -10,9 +10,10 @@
     <string name="label_10000_rows">Inserting 10,000 Rows</string>
     <string name="label_100000_rows">Inserting 100,000 Rows</string>
     <string name="label_1000000_rows">Inserting 1,000,000 Rows</string>
-    <string name="sql_with_cv">With Content Values</string>
-    <string name="sql_cv_worst">With CV - Worst Performance</string>
-    <string name="sql_with_raw">With Compiled Statements</string>
+    <string name="sql_with_cv">Content Values</string>
+    <string name="sql_cv_worst">Content Values - No Transaction</string>
+    <string name="sql_with_raw">Compiled Statements</string>
+    <string name="sql_raw_worst">Compiled Statement - No Transaction</string>
     <string name="sql_clear">Clean Up After Yourself</string>
     <string name="time_to_complete">Time to complete:</string>
     <string name="working">Working, dude, hang on</string>

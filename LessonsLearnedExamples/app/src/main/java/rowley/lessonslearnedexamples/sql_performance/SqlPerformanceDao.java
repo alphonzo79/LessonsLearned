@@ -56,6 +56,37 @@ public class SqlPerformanceDao extends CoreDbHelper {
         }
     }
 
+    public void addTestDataWithSqlStatementNoTransaction(int numToAdd) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        SQLiteStatement stmt = db.compileStatement(String.format(Locale.US, "INSERT INTO %s (%s, %s, %s, %s, %s, %s) VALUES (?, ?, ?, ?, ?, ?);", TABLE_NAME, COLUMN_ONE, COLUMN_TWO, COLUMN_THREE, COLUMN_FOUR, COLUMN_FIVE, COLUMN_SIX));
+//        db.beginTransaction();
+        try {
+            for(int i = 0; i < numToAdd; i++) {
+                stmt.bindString(1, String.valueOf(i));
+                stmt.bindString(2, String.valueOf(i));
+                stmt.bindLong(3, i);
+                stmt.bindLong(4, i);
+                stmt.bindString(5, String.valueOf(i));
+                stmt.bindLong(6, i);
+
+                stmt.execute();
+
+                stmt.clearBindings();
+
+//                db.yieldIfContendedSafely();
+            }
+//            db.setTransactionSuccessful();
+        } catch (SQLiteException e) {
+            e.printStackTrace();
+        } finally {
+            stmt.clearBindings();
+            stmt.close();
+//            db.endTransaction();
+            db.close();
+        }
+    }
+
     public void addTestDataWithContentValues(int numToAdd) {
         SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();

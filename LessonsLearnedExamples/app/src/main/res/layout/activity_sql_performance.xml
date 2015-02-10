@@ -48,6 +48,13 @@
                 android:text="@string/sql_with_raw"/>
 
             <Button
+                android:id="@+id/raw_100_nt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/sql_raw_worst"/>
+
+            <Button
                 android:id="@+id/cv_100"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,6 +91,13 @@
                 android:layout_height="wrap_content"
                 android:onClick="onClick"
                 android:text="@string/sql_with_raw"/>
+
+            <Button
+                android:id="@+id/raw_1000_nt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/sql_raw_worst"/>
 
             <Button
                 android:id="@+id/cv_1000"
@@ -124,6 +138,13 @@
                 android:text="@string/sql_with_raw"/>
 
             <Button
+                android:id="@+id/raw_10000_nt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/sql_raw_worst"/>
+
+            <Button
                 android:id="@+id/cv_10000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -162,6 +183,13 @@
                 android:text="@string/sql_with_raw"/>
 
             <Button
+                android:id="@+id/raw_100000_nt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/sql_raw_worst"/>
+
+            <Button
                 android:id="@+id/cv_100000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -198,6 +226,13 @@
                 android:layout_height="wrap_content"
                 android:onClick="onClick"
                 android:text="@string/sql_with_raw"/>
+
+            <Button
+                android:id="@+id/raw_1000000_nt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="@string/sql_raw_worst"/>
 
             <Button
                 android:id="@+id/cv_1000000"
