@@ -35,39 +35,54 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.raw_100:
-                doInserts(100, false);
+                doInserts(100, false, false);
                 break;
             case R.id.cv_100:
-                doInserts(100, true);
+                doInserts(100, true, false);
+                break;
+            case R.id.cv_100_worst:
+                doInserts(100, true, true);
                 break;
             case R.id.raw_1000:
-                doInserts(1000, false);
+                doInserts(1000, false, false);
                 break;
             case R.id.cv_1000:
-                doInserts(1000, true);
+                doInserts(1000, true, false);
+                break;
+            case R.id.cv_1000_worst:
+                doInserts(1000, true, true);
                 break;
             case R.id.raw_10000:
-                doInserts(10000, false);
+                doInserts(10000, false, false);
                 break;
             case R.id.cv_10000:
-                doInserts(10000, true);
+                doInserts(10000, true, false);
+                break;
+            case R.id.cv_10000_worst:
+                doInserts(10000, true, true);
                 break;
             case R.id.raw_100000:
-                doInserts(100000, false);
+                doInserts(100000, false, false);
                 break;
             case R.id.cv_100000:
-                doInserts(100000, true);
+                doInserts(100000, true, false);
+                break;
+            case R.id.cv_100000_worst:
+                doInserts(100000, true, true);
                 break;
             case R.id.raw_1000000:
-                doInserts(1000000, false);
+                doInserts(1000000, false, false);
                 break;
             case R.id.cv_1000000:
-                doInserts(1000000, true);
+                doInserts(1000000, true, false);
+                break;
+            case R.id.cv_1000000_worst:
+                doInserts(1000000, true, true);
                 break;
         }
     }
 
-    private void doInserts(int count, boolean withCv) {
+    private void doInserts(int count, boolean withCv, boolean withWorstPerf) {
         progress.show();
         elapsedTimeDisplay.setText("");
         dao.clearTable();
@@ -76,7 +91,11 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
             @Override
             protected Void doInBackground(Object... params) {
                 if((Boolean)params[1]) {
-                    dao.addTestDataWithContentValues((Integer)params[0]);
+                    if((Boolean)params[2]) {
+                        dao.addTestDataWithContentValuesWorstPerformance((Integer)params[0]);
+                    } else {
+                        dao.addTestDataWithContentValues((Integer) params[0]);
+                    }
                 } else {
                     dao.addTestDataWithSqlStatement((Integer)params[0]);
                 }
@@ -105,6 +124,6 @@ public class SqlPerformanceActivity extends Activity implements View.OnClickList
                 elapsedTimeDisplay.setText(message);
                 progress.dismiss();
             }
-        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, count, withCv);
+        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, count, withCv, withWorstPerf);
     }
 }

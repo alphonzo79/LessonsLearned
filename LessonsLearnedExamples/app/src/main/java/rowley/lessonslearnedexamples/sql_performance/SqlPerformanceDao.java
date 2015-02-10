@@ -83,6 +83,33 @@ public class SqlPerformanceDao extends CoreDbHelper {
         }
     }
 
+    public void addTestDataWithContentValuesWorstPerformance(int numToAdd) {
+        SQLiteDatabase db = getWritableDatabase();
+//        db.beginTransaction();
+
+        try {
+            for(int i = 0; i < numToAdd; i++) {
+                ContentValues cv = new ContentValues();
+                cv.put(COLUMN_ONE, String.valueOf(i));
+                cv.put(COLUMN_TWO, String.valueOf(i));
+                cv.put(COLUMN_THREE, i);
+                cv.put(COLUMN_FOUR, i);
+                cv.put(COLUMN_FIVE, String.valueOf(i));
+                cv.put(COLUMN_SIX, i);
+
+                db.insertWithOnConflict(TABLE_NAME, null, cv, SQLiteDatabase.CONFLICT_IGNORE);
+
+//                db.yieldIfContendedSafely();
+            }
+//            db.setTransactionSuccessful();
+        } catch(SQLiteException e) {
+            e.printStackTrace();
+        } finally {
+//            db.endTransaction();
+            db.close();
+        }
+    }
+
     public void clearTable() {
         SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();

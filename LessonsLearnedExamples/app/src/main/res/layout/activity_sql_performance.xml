@@ -55,6 +55,14 @@
                 android:onClick="onClick"
                 android:text="@string/sql_with_cv"/>
 
+            <Button
+                android:id="@+id/cv_100_worst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onClick"
+                android:text="@string/sql_cv_worst"/>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -84,6 +92,14 @@
                 android:layout_marginTop="5dp"
                 android:onClick="onClick"
                 android:text="@string/sql_with_cv"/>
+
+            <Button
+                android:id="@+id/cv_1000_worst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onClick"
+                android:text="@string/sql_cv_worst"/>
 
             <View
                 android:layout_width="match_parent"
@@ -115,6 +131,14 @@
                 android:onClick="onClick"
                 android:text="@string/sql_with_cv"/>
 
+            <Button
+                android:id="@+id/cv_10000_worst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onClick"
+                android:text="@string/sql_cv_worst"/>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -145,6 +169,14 @@
                 android:onClick="onClick"
                 android:text="@string/sql_with_cv"/>
 
+            <Button
+                android:id="@+id/cv_100000_worst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onClick"
+                android:text="@string/sql_cv_worst"/>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -174,6 +206,14 @@
                 android:layout_marginTop="5dp"
                 android:onClick="onClick"
                 android:text="@string/sql_with_cv"/>
+
+            <Button
+                android:id="@+id/cv_1000000_worst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onClick"
+                android:text="@string/sql_cv_worst"/>
 
         </LinearLayout>
 
